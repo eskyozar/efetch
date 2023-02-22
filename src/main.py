@@ -26,7 +26,7 @@ uptime = uptime // 60
 
 uptime = int(uptime)
 
-shell = os.popen("echo $SHELL").read()
+shell = os.popen("echo ${SHELL##*/}").read()
 
 shell = shell.strip()
 
